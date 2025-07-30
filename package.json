@@ -1,0 +1,17 @@
+{
+  "name": "fireborn-pizza",
+  "version": "1.0.0",
+  "description": "🔥 A modern, responsive website for a fictional wood-fired pizzeria — Fireborn Pizza. Crafted with HTML, Tailwind CSS, and JavaScript to showcase traditional flavor through contemporary design.",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

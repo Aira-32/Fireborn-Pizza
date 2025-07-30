@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+@theme {
+    /* fonts */
+
+
+    /* colors */
+    --color-charred-oak: #2C1A0F;      /* Text/Navbar */
+    --color-blazing-ember: #D45A28;    /* Buttons/Accents */
+    --color-crunch-glow: #FFA726;      /* Crust highlight/Hover */
+    --color-flour-canvas: #FFF9F0;     /* Backgrounds */
+}
