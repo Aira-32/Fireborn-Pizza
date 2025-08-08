@@ -1,13 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Astloch:wght@400;700&family=Climate+Crisis&family=Girassol&family=Holtwood+One+SC&family=Kaushan+Script&family=Limelight&family=McLaren&display=swap');
 @import "tailwindcss";
 
+/* Animazioni personalizzate */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient-x {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+    background-size: 200% 100%;
+    animation: gradient-x 8s ease infinite;
+}
 
 @theme {
-    /* fonts */
+    --font-akronim: "Akronim", cursive;
+    --font-astloch: "Astloch", serif;
+    --font-climate: "Climate Crisis", sans-serif;
+    --font-mclaren: "McLaren", cursive;
+    --font-kaushan: "Kaushan Script", cursive;
+    
+    --font-girassol: "Girassol", cursive;
+    --font-holtwood: "Holtwood One SC", serif;
+    --font-limelight: "Limelight", cursive;
 
-
-    /* colors */
-    --color-charred-oak: #2C1A0F;      /* Text/Navbar */
-    --color-blazing-ember: #D45A28;    /* Buttons/Accents */
-    --color-crunch-glow: #FFA726;      /* Crust highlight/Hover */
-    --color-flour-canvas: #FFF9F0;     /* Backgrounds */
+    /* 🌈 COLORS */
+    --color-charred-oak: #2C1A0F;      /* Testo/Navbar */
+    --color-blazing-ember: #D45A28;    /* Bottoni/Accenti */
+    --color-crunch-glow: #FFA726;      /* Evidenziazione bordo/Hover */
+    --color-flour-canvas: #FFF9F0;     /* Sfondo */
 }
