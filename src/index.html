@@ -292,6 +292,114 @@
             </div>
         </section>
 
+        <section id="location" class="py-24 bg-gradient-to-br from-flour-canvas to-amber-50 relative overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute -top-32 -right-32 w-96 h-96 bg-blazing-ember/5 rounded-full filter blur-3xl"></div>
+                <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-crunch-glow/5 rounded-full filter blur-3xl"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-climate text-charred-oak mb-3">Find Us</h2>
+                    <div class="w-32 h-1.5 bg-gradient-to-r from-blazing-ember to-crunch-glow mx-auto rounded-full"></div>
+                    <p class="mt-6 text-charred-oak/80 max-w-2xl mx-auto text-lg">Visit our pizzeria for an authentic Neapolitan experience in the heart of the city</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Mappa -->
+                    <div class="relative group h-[500px] rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 hover:shadow-2xl hover:shadow-blazing-ember/20">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blazing-ember/20 to-crunch-glow/20 mix-blend-multiply"></div>
+                        <iframe 
+                            title="Our location on Google Maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425872426608!3d40.74076987932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sPizza%20Place!5e0!3m2!1sen!2sit!4v1620000000000!5m2!1sen!2sit" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            class="absolute inset-0 w-full h-full">
+                        </iframe>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-charred-oak/90 to-transparent text-white">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-map-marker-alt text-2xl text-blazing-ember"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg">Our Location</h3>
+                                    <p class="text-white/90">123 Pizza Street, New York</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Info Contatti -->
+                    <div class="space-y-8">
+                        <!-- Orari -->
+                        <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-charred-oak/10 hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-blazing-ember/10 p-3 rounded-xl">
+                                    <i class="far fa-clock text-2xl text-blazing-ember"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-charred-oak">Opening Hours</h3>
+                            </div>
+                            <dl class="space-y-3">
+                                <div class="flex justify-between items-center py-2 border-b border-charred-oak/5">
+                                    <dt class="font-medium text-charred-oak/90">Mon - Thu</dt>
+                                    <dd class="text-charred-oak/80">6:00 PM - 11:00 PM</dd>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-charred-oak/5">
+                                    <dt class="font-medium text-charred-oak/90">Fri - Sat</dt>
+                                    <dd class="text-charred-oak/80">6:00 PM - 12:00 AM</dd>
+                                </div>
+                                <div class="flex justify-between items-center py-2">
+                                    <dt class="font-medium text-charred-oak/90">Sunday</dt>
+                                    <dd class="text-charred-oak/80 text-right">12:00 PM - 3:00 PM<br>7:00 PM - 11:00 PM</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        
+                        <!-- Contatti -->
+                        <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-charred-oak/10 hover:shadow-xl transition-shadow duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-blazing-ember/10 p-3 rounded-xl">
+                                    <i class="fas fa-phone-alt text-2xl text-blazing-ember"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-charred-oak">Contact Us</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <a href="tel:+12125551234" class="flex items-center gap-3 group">
+                                    <div class="w-10 h-10 rounded-full bg-blazing-ember/10 flex items-center justify-center group-hover:bg-blazing-ember/20 transition-colors">
+                                        <i class="fas fa-phone text-blazing-ember"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-charred-oak/70 text-sm">Call us at</p>
+                                        <p class="font-medium text-charred-oak group-hover:text-blazing-ember transition-colors">(212) 555-1234</p>
+                                    </div>
+                                </a>
+                                <a href="mailto:info@firebornpizza.com" class="flex items-center gap-3 group">
+                                    <div class="w-10 h-10 rounded-full bg-blazing-ember/10 flex items-center justify-center group-hover:bg-blazing-ember/20 transition-colors">
+                                        <i class="far fa-envelope text-blazing-ember"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-charred-oak/70 text-sm">Email us at</p>
+                                        <p class="font-medium text-charred-oak group-hover:text-blazing-ember transition-colors">info@firebornpizza.com</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Prenotazione -->
+                        <div class="text-center pt-4">
+                            <a href="#" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blazing-ember to-crunch-glow hover:from-crunch-glow hover:to-blazing-ember text-white py-4 px-8 rounded-full font-mclaren text-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-crunch-glow/30 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blazing-ember">
+                                <i class="far fa-calendar-alt"></i>
+                                Book a Table
+                            </a>
+                            <p class="mt-3 text-charred-oak/70 text-sm">Reservations recommended on weekends</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     <script>
         // Wait for the DOM to be fully loaded
