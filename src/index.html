@@ -10,34 +10,72 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>FireBorn Pizza - Homepage</title>
     <meta name="description" content="FireBorn Pizza - A demo restaurant website showcasing modern web development. Practice project featuring responsive design, interactive components, and UI/UX best practices.">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Solo le regole essenziali per la compatibilità con Opera Mobile */
+        @supports not (background-color: oklch(0 0 0)) {
+            /* Fallback per i colori personalizzati */
+            .bg-charred-oak { background-color: #2c1810 !important; }
+            .bg-flour-canvas { background-color: #f5f1e9 !important; }
+            .bg-blazing-ember { background-color: #e65100 !important; }
+            .bg-crunch-glow { background-color: #ffab00 !important; }
+            
+            /* Fallback per i testi */
+            .text-charred-oak { color: #2c1810 !important; }
+            .text-flour-canvas { color: #f5f1e9 !important; }
+            .text-blazing-ember { color: #e65100 !important; }
+            .text-crunch-glow { color: #ffab00 !important; }
+            
+            /* Fallback per i bordi */
+            .border-charred-oak { border-color: #2c1810 !important; }
+            .border-flour-canvas { border-color: #f5f1e9 !important; }
+        }
+        
+        /* Stili esistenti */
+        .pizza-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        .pizza-slide img {
+            max-height: 400px;
+            width: auto;
+            max-width: 100%;
+        }
+        .pizza-info {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 <body class="bg-flour-canvas">
     
-    <header class="fixed z-40 w-full flex justify-between items-center backdrop-blur-md backdrop-brightness-50 text-lg text-white bg-charred-oak">
-        <a href="index.html" aria-label="Go to home" class="flex justify-center items-center gap-2 p-6 pr-10 md:p-4 lg:pr-12 text-2xl bg-flour-canvas rounded-tr-full text-black group h-full">
+    <header class="fixed z-40 w-full h-12 lg:h-16 flex justify-between items-center backdrop-blur-md backdrop-brightness-50 text-lg text-white bg-charred-oak">
+        <a href="index.html" aria-label="Go to home" class="flex justify-center items-center gap-2 text-2xl bg-flour-canvas rounded-tr-full text-black group h-full pl-4 pr-6">
             <div class="relative">
                 <i class="fa-solid fa-fire-flame-curved text-transparent bg-clip-text bg-gradient-to-r from-blazing-ember to-crunch-glow text-3xl transition-transform duration-300 group-hover:scale-110"></i>
-                <i class="fa-solid fa-fire-flame-curved text-crunch-glow/20 absolute inset-0 blur-sm"></i>
             </div>
             <h2 class="font-kaushan bg-gradient-to-r from-blazing-ember to-crunch-glow bg-clip-text text-transparent">FireBorn Pizza</h2>
         </a>
         <nav class="hidden lg:block" aria-label="Main navigation">
-            <ul class="flex space-x-6 p-4 pr-8 font-mclaren">
+            <ul class="flex space-x-6 pr-8 font-mclaren">
                 <li><a href="#about" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">About</a></li>
                 <li><a href="#contact" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Contact</a></li>
                 <li><a href="#menu" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Menu</a></li>
             </ul>
         </nav>
 
-        <div class="lg:hidden p-4">
+        <div class="lg:hidden px-4">
             <button 
                 id="mobile-menu-button" 
                 aria-expanded="false" 
                 aria-controls="mobile-menu" 
-                class="text-white hover:text-crunch-glow focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded-md p-2"
+                class="text-white hover:text-crunch-glow focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded-md justify-self-center"
             >
                 <span class="sr-only">Open main menu</span>
-                <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                <i class="fa-solid fa-bars text-2xl justify-self-center" aria-hidden="true"></i>
             </button>
         </div>
     </header>
@@ -137,7 +175,7 @@
             <div class="w-full h-screen flex items-center pl-5 lg:pl-20 relative overflow-hidden">
                 <div class="flex flex-col gap-5 text-xl w-full max-w-3xl z-10 translate-y-30">
                 
-                    <h2 class="relative text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-akronim bg-clip-text text-transparent bg-gradient-to-r from-blazing-ember via-crunch-glow to-blazing-ember animate-gradient-x">
+                    <h2 class="relative text-7xl md:text-6xl lg:text-7xl xl:text-8xl font-akronim bg-clip-text text-transparent bg-gradient-to-r from-blazing-ember via-crunch-glow to-blazing-ember animate-gradient-x">
                         Crunch born <br class="sm:hidden"> from fire
                     </h2>
                     <div class="absolute w-40 h-40 bg-crunch-glow/20 rounded-full filter blur-3xl -z-10"></div>
@@ -160,9 +198,9 @@
             <div class="hidden lg:block absolute right-0 top-20 lg:w-[700px] overflow-hidden h-full">
                 <img src="static/images/pizza.svg" class="absolute right-0 translate-x-2/5" alt="pizza margherita">
             </div>
-            <img src="static/images/pizza_cutter.svg" class="absolute top-52 md:top-0 right-0 lg:right-1/3 w-1/2 md:w-1/4" alt="pizza cutter">
+            <img src="static/images/pizza_cutter.svg" class="absolute top-40 md:top-0 right-0 lg:right-1/3 w-1/2 md:w-1/4" alt="pizza cutter">
             
-            <span class="absolute bottom-0 justify-self-center mb-10 flex gap-2 items-center animate-bounce">
+            <span class="absolute bottom-0 justify-self-center text-lg mb-5 lg:mb-10 flex gap-2 items-center animate-bounce">
                 Scroll for more
                 <i class="fa-solid fa-arrow-down"></i>
             </span>
@@ -580,18 +618,44 @@
                 <a href="https://airadev-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" 
                    class="inline-flex items-center text-white/70 hover:text-crunch-glow text-xs font-mclaren tracking-wider transition-colors duration-300">
                     <span class="mr-2">crafted by</span>
-    </footer>
+                </div>
+            </div>
+        </footer>
 
+    <!-- Hero Slider -->
+    <section class="relative h-screen">
+        <div class="swiper h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide bg-charred-oak flex items-center justify-center">
+                    <div class="container mx-auto px-4 text-center text-white">
+                        <h2 class="text-4xl md:text-6xl font-bold mb-6">Authentic Italian Pizza</h2>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto">Handcrafted with love using traditional recipes and the finest ingredients.</p>
+                        <a href="#menu" class="inline-block bg-crunch-glow text-charred-oak font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-all duration-300">
+                            View Menu
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next text-crunch-glow"></div>
+            <div class="swiper-button-prev text-crunch-glow"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
-
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
         // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Get the mobile menu button, close button, and menu elements
+            // Mobile Menu Functionality
             const menuButton = document.getElementById('mobile-menu-button');
             const closeButton = document.getElementById('close-mobile-menu');
-{{ ... }}
+            const mobileMenu = document.getElementById('mobile-menu');
             const overlay = document.getElementById('mobile-menu-overlay');
             
             // Toggle menu function
@@ -602,13 +666,11 @@
                 if (!isExpanded) {
                     // Open menu
                     document.body.style.overflow = 'hidden';
-                    overlay.classList.remove('hidden');
-                    setTimeout(() => {
-                        overlay.classList.remove('opacity-0');
-                        mobileMenu.classList.remove('translate-x-full');
-                    }, 10);
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    overlay.classList.remove('opacity-0', 'pointer-events-none');
+                    overlay.classList.add('opacity-100', 'pointer-events-auto');
                 } else {
-                    // Close menu
                     closeMenu();
                 }
             }
@@ -616,80 +678,62 @@
             // Close menu function
             function closeMenu() {
                 menuButton.setAttribute('aria-expanded', 'false');
-                overlay.classList.add('opacity-0');
+                document.body.style.overflow = '';
+                mobileMenu.classList.remove('translate-x-0');
                 mobileMenu.classList.add('translate-x-full');
-                
-                setTimeout(() => {
-                    overlay.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }, 300);
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
             }
             
-            // Event listeners
-            menuButton.addEventListener('click', toggleMenu);
-            closeButton.addEventListener('click', closeMenu);
-            overlay.addEventListener('click', closeMenu);
+            // Event listeners for mobile menu
+            if (menuButton) menuButton.addEventListener('click', toggleMenu);
+            if (closeButton) closeButton.addEventListener('click', closeMenu);
+            if (overlay) overlay.addEventListener('click', closeMenu);
             
-            // Close menu when clicking on links
+            // Close menu when clicking on navigation links
             document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth < 1024) { // Only on mobile
-                        closeMenu();
-                    }
-                });
+                link.addEventListener('click', closeMenu);
             });
             
             // Close menu on escape key
-            document.addEventListener('keydown', (e) => {
+            document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
                     closeMenu();
                     menuButton.focus();
                 }
             });
-        });
 
-        // Initialize Swiper
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            a11y: {
-                prevSlideMessage: 'Previous pizza',
-                nextSlideMessage: 'Next pizza',
-                firstSlideMessage: 'This is the first pizza',
-                lastSlideMessage: 'This is the last pizza',
-                paginationBulletMessage: 'Go to pizza {{index}}',
-            },
+            // Initialize Swiper if it exists on the page
+            if (document.querySelector('.swiper')) {
+                const swiper = new Swiper('.swiper', {
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span class="' + className + '" role="button" tabindex="0" aria-label="Go to slide ' + (index + 1) + '"></span>';
+                        }
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    a11y: {
+                        enabled: true,
+                        prevSlideMessage: 'Previous slide',
+                        nextSlideMessage: 'Next slide',
+                        firstSlideMessage: 'This is the first slide',
+                        lastSlideMessage: 'This is the last slide',
+                        paginationBulletMessage: 'Go to slide {{index}}',
+                    },
+                });
+            }
         });
     </script>
     <script src="script.js"></script>
-</body>
-    <style>
-        .pizza-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
-        .pizza-slide img {
-            max-height: 400px;
-            width: auto;
-            max-width: 100%;
-        }
-        .pizza-info {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-    </style>
 </body>
 </html>
