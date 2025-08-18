@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>FireBorn Pizza - About Us</title>
+    <meta name="description" content="FireBorn Pizza - A demo restaurant website showcasing modern web development. Practice project featuring responsive design, interactive components, and UI/UX best practices.">
+</head>
+<body class="bg-flour-canvas">
+    
+    <header class="fixed z-40 w-full h-12 lg:h-16 flex justify-between items-center backdrop-blur-md backdrop-brightness-50 text-lg text-white bg-charred-oak">
+        <a href="index.html" aria-label="Go to home" class="flex justify-center items-center gap-2 text-2xl bg-flour-canvas rounded-tr-full text-black group h-full pl-4 pr-6">
+            <div class="relative">
+                <i class="fa-solid fa-fire-flame-curved text-transparent bg-clip-text bg-gradient-to-r from-blazing-ember to-crunch-glow text-3xl transition-transform duration-300 group-hover:scale-110"></i>
+            </div>
+            <h2 class="font-kaushan bg-gradient-to-r from-blazing-ember to-crunch-glow bg-clip-text text-transparent">FireBorn Pizza</h2>
+        </a>
+        <nav class="hidden lg:block" aria-label="Main navigation">
+            <ul class="flex space-x-6 pr-8 font-mclaren">
+                <li><a href="about.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">About</a></li>
+                <li><a href="contact.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Contact</a></li>
+                <li><a href="menu.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Menu</a></li>
+                <li><a href="gallery.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div class="lg:hidden px-4">
+            <button 
+                id="mobile-menu-button" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu" 
+                class="text-white hover:text-crunch-glow focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded-md justify-self-center"
+            >
+                <span class="sr-only">Open main menu</span>
+                <i class="fa-solid fa-bars text-2xl justify-self-center" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <!-- Mobile Menu -->
+    <aside id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-charred-oak shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Header with logo and close button -->
+        <div class="flex justify-between items-center p-6 border-b border-white/10 bg-charred-oak/90 backdrop-blur-sm">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-fire-flame-curved text-crunch-glow text-xl"></i>
+                <h2 class="text-2xl font-kaushan text-white">FireBorn Pizza</h2>
+            </div>
+            <button id="close-mobile-menu" class="text-white hover:text-crunch-glow focus:outline-none p-2 -mr-2" aria-label="Close menu">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Mobile navigation" class="flex-1 overflow-y-auto py-4">
+            <div class="px-6 mb-6">
+                <p class="text-crunch-glow/90 text-sm font-medium mb-4">MAIN MENU</p>
+                <div class="grid grid-cols-2 gap-3 md:gap-7 ">
+                    <a href="index.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-home text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Home</span>
+                    </a>
+                    
+                    <a href="menu.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20 relative">
+                        <i class="fas fa-pizza-slice text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Our Menu</span>
+                        <span class="absolute top-2 right-2 bg-crunch-glow/10 text-crunch-glow text-[10px] px-1.5 py-0.5 rounded-full">New</span>
+                    </a>
+                    
+                    <a href="about.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-info-circle text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">About Us</span>
+                    </a>
+                    
+                    <a href="gallery.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-images text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Gallery</span>
+                    </a>
+                    
+                    <a href="contact.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20 col-span-2">
+                        <i class="fas fa-envelope text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Contact Us</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="px-6 mb-6">
+                <p class="text-crunch-glow/90 text-sm font-medium mb-4">SPECIAL OFFERS</p>
+                <div class="bg-blazing-ember/10 rounded-xl p-4 mb-4 border border-crunch-glow/20">
+                    <p class="text-white font-medium mb-1">Family Deal</p>
+                    <p class="text-white/70 text-sm mb-2">2 Large Pizzas + 2 Sides + 4 Drinks</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-crunch-glow font-bold">€29.99</span>
+                        <button class="text-xs bg-crunch-glow text-charred-oak px-3 py-1 rounded-full font-medium hover:bg-opacity-90 transition-colors">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-6">
+                <a href="" class="block w-full text-center bg-gradient-to-r from-blazing-ember to-crunch-glow text-white py-3 px-6 rounded-xl font-medium hover:opacity-90 transition-opacity shadow-lg shadow-crunch-glow/20">
+                    Order Now
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Aside's Footer -->
+        <div class="border-t border-white/10 p-6 bg-charred-oak/80 backdrop-blur-sm">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="TripAdvisor">
+                    <i class="fab fa-tripadvisor"></i>
+                </a>
+            </div>
+            <div class="text-center text-white/60 text-xs space-y-1">
+                <p>123 Pizza Street, Napoli</p>
+                <p>Open: Mon-Sun 11:00 - 23:00</p>
+                <p class="mt-2">&copy; 2025 FireBorn Pizza</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="pt-10">
+        <!-- Hero Section -->
+        <section class="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-charred-oak overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
+                     alt="Wood-fired pizza oven" 
+                     class="w-full h-full object-cover opacity-40">
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <span class="text-crunch-glow font-mclaren text-lg tracking-wider mb-4 block">OUR STORY</span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-kaushan text-white mb-6 leading-tight">
+                    Crafting Pizza<br>Since 1985
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-blazing-ember to-crunch-glow mx-auto my-8"></div>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-mclaren">
+                    Where tradition meets passion in every wood-fired masterpiece
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-amber-50">
+            <div class="max-w-6xl mx-auto relative">
+                <!-- Decorative element -->
+                <div class="absolute -left-20 -top-20 w-64 h-64 rounded-full bg-amber-100 -z-10"></div>
+                
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <img 
+                        src="static/images/gallery/pexels-alexandra-stroescu-1044324559-29021173.jpg" 
+                        alt="pizza on plate with drinks"
+                        class="h-[700px] rounded-2xl overflow-hidden shadow-2xl justify-self-center"
+                    >
+                    
+                    
+                    <div class="space-y-8">
+                        <div class="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-4 font-mclaren">
+                            Our Story
+                        </div>
+                        
+                        <h2 class="text-4xl md:text-5xl font-holtwood text-amber-800">
+                            <span class="text-blazing-ember">Crafting Memories</span> Since 1985
+                        </h2>
+                        
+                        <div class="space-y-6 text-gray-700 font-mclaren">
+                            <p class="text-lg leading-relaxed">
+                                Grandma Maria's secret recipe, now served with love to you.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 pt-4">
+                            <div class="text-center p-4 bg-white rounded-xl border border-amber-100">
+                                <span class="block text-3xl font-girassol text-amber-700">38+</span>
+                                <span class="text-sm text-gray-500">Years</span>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-xl border border-amber-100">
+                                <span class="block text-3xl font-girassol text-amber-700">12+</span>
+                                <span class="text-sm text-gray-500">Specialties</span>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-xl border border-amber-100">
+                                <span class="block text-3xl font-girassol text-amber-700">100%</span>
+                                <span class="text-sm text-gray-500">Passion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Kitchen's Heart Section -->
+        <section class="py-20 bg-gradient-to-b from-white to-amber-50">
+            <div class="max-w-6xl mx-auto px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-holtwood text-charred-oak mb-6">
+                        <span class="block text-2xl font-girassol text-amber-600 mb-2">Our Kitchen's Heart</span>
+                        Crafted with Passion
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto font-mclaren">
+                        The secret behind every perfect bite
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
+                            <i class="fas fa-leaf text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Local Ingredients</h3>
+                        <p class="text-gray-600 text-center font-mclaren">
+                            Partnering with local farmers for the freshest, highest quality ingredients.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
+                            <i class="fas fa-clock text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Slow Fermentation</h3>
+                        <p class="text-gray-600 text-center font-mclaren">
+                            48-hour proofing for the perfect crust - crispy outside, airy inside.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                        <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
+                            <i class="fas fa-fire text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Wood-Fired Oven</h3>
+                        <p class="text-gray-600 text-center font-mclaren">
+                            Traditional oak and olive wood oven reaching 400°C for authentic flavor.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="relative group">
+                        <img 
+                            src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
+                            alt="Wood-fired oven with flames licking the pizza"
+                            class="w-full h-[600px] object-center object-cover transition-transform duration-700 group-hover:scale-105"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-charred-oak/70 to-transparent flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-2xl font-bold mb-2">Our Signature Oven</h3>
+                                <p class="font-mclaren text-white/90">Where tradition meets perfect heat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-24 bg-flour-canvas">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-6xl font-climate text-charred-oak mb-6">Meet Our Team</h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-blazing-ember to-crunch-glow mx-auto mb-8"></div>
+                    <p class="text-charred-oak/80 max-w-3xl mx-auto text-lg font-mclaren">
+                        The passionate artisans behind every FireBorn creation
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Team Member 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1604908177453-7462950a6cf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" 
+                                 alt="Marco Rossi - Head Pizzaiolo" 
+                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-charred-oak mb-1">Marco Rossi</h3>
+                            <p class="text-blazing-ember font-medium mb-4">Head Pizzaiolo</p>
+                            <p class="text-charred-oak/80 mb-4 font-mclaren">
+                                With over 25 years of experience, Marco is the guardian of our perfect dough fermentation secrets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556911220-bf7efc89d8c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" 
+                                 alt="Giulia Bianchi - Pastry Chef" 
+                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-charred-oak mb-1">Giulia Bianchi</h3>
+                            <p class="text-blazing-ember font-medium mb-4">Pastry Chef</p>
+                            <p class="text-charred-oak/80 mb-4 font-mclaren">
+                                The queen of desserts, bringing traditional Italian pastries with a modern twist to our menu.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div class="h-80 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d8d545b?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" 
+                                 alt="Luca Neri - Sous Chef" 
+                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-charred-oak mb-1">Luca Neri</h3>
+                            <p class="text-blazing-ember font-medium mb-4">Sous Chef</p>
+                            <p class="text-charred-oak/80 mb-4 font-mclaren">
+                                A rising star in the culinary world, learning the art of authentic Neapolitan pizza-making.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-br from-charred-oak to-charred-oak/90 text-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="static/images/gallery/pexels-rachel-claire-5531438.jpg" 
+                     alt="Restaurant interior" 
+                     class="w-full h-full object-cover object-bottom">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h2 class="text-4xl md:text-5xl font-climate text-crunch-glow mb-6">Taste the Tradition</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-blazing-ember to-crunch-glow mx-auto mb-8"></div>
+                <p class="text-xl mb-10 max-w-2xl mx-auto font-mclaren">
+                    Join us for an authentic Neapolitan pizza experience in the heart of Florence
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-crunch-glow text-charred-oak hover:bg-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 flex items-center justify-center space-x-2 group">
+                        <span>Reserve a Table</span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="menu.html" class="bg-transparent border-2 border-crunch-glow text-white hover:bg-crunch-glow hover:text-charred-oak px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 flex items-center justify-center space-x-2 group">
+                        <span>View Our Menu</span>
+                        <i class="fas fa-utensils group-hover:rotate-12 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charred-oak border-t text-flour-canvas pt-12 pb-4" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo and Description -->
+                <div class="md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-4 group" aria-label="Go to home">
+                        <div class="relative">
+                            <i class="fa-solid fa-fire-flame-curved text-transparent bg-clip-text bg-gradient-to-r from-blazing-ember to-crunch-glow text-3xl transition-transform duration-300 group-hover:scale-110"></i>
+                            <i class="fa-solid fa-fire-flame-curved text-crunch-glow/20 absolute inset-0 blur-sm"></i>
+                        </div>
+                        <h2 class="font-kaushan text-2xl bg-gradient-to-r from-blazing-ember to-crunch-glow bg-clip-text text-transparent">FireBorn Pizza</h2>
+                    </a>
+                    <p class="text-flour-canvas/70 mb-4">Authentic Neapolitan pizza baked in a wood-fired oven, prepared with selected ingredients and a lot of passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-3 md:gap-x-8">
+                        <a href="index.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="menu.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Menu</span>
+                        </a>
+                        <a href="index.html#specialties" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Specialties</span>
+                        </a>
+                        <a href="index.html#location" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Location</span>
+                        </a>
+                        <a href="about.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>About Us</span>
+                        </a>
+                        <a href="contact.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Contact</span>
+                        </a>
+                        <a href="gallery.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Stay Updated</h4>
+                    <p class="text-white/70 mb-4">Subscribe to our newsletter to receive special offers and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-flour-canvas border border-r-0 border-flour-canvas" aria-label="Your email address">
+                        <button type="submit" class="bg-blazing-ember hover:bg-blazing-ember/90 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/50 text-sm">&copy; 2025 FireBorn Pizza. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Cookie Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center border-t border-white/10 pt-6">
+                <a href="https://airadev-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center text-white/70 hover:text-crunch-glow text-xs font-mclaren tracking-wider transition-colors duration-300">
+                    <img src="static/images/logo aira per esteso.svg" class="w-30" alt="Author logo">
+                </a>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

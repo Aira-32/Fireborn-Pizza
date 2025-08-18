@@ -33,60 +33,36 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#mobile-menu a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
-});
 
-// Initialize Swiper for pizza slider
-document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        
-        // Pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
+    // Initialize Swiper if it exists on the page
+    if (document.querySelector('.swiper')) {
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-        },
-        
-        // Responsive breakpoints
-        breakpoints: {
-            // When window width is >= 640px
-            640: {
-                slidesPerView: 1.5,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            // When window width is >= 1024px
-            1024: {
-                slidesPerView: 3,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
             }
-        },
-        
-        // Keyboard control
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        
-        // Accessibility
-        a11y: {
-            prevSlideMessage: 'Previous pizza',
-            nextSlideMessage: 'Next pizza',
-            paginationBulletMessage: 'Go to pizza {{index}}',
-        }
-    });
-});
+        });
+    }
 });
