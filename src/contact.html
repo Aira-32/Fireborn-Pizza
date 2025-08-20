@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>FireBorn Pizza - Homepage</title>
+    <meta name="description" content="FireBorn Pizza - A demo restaurant website showcasing modern web development. Practice project featuring responsive design, interactive components, and UI/UX best practices.">
+</head>
+<body class="bg-flour-canvas">
+    
+    <header class="fixed z-40 w-full h-12 lg:h-16 flex justify-between items-center backdrop-blur-md backdrop-brightness-50 text-lg text-white bg-charred-oak">
+        <a href="index.html" aria-label="Go to home" class="flex justify-center items-center gap-2 text-2xl bg-flour-canvas rounded-tr-full text-black group h-full pl-4 pr-6">
+            <div class="relative">
+                <i class="fa-solid fa-fire-flame-curved text-transparent bg-clip-text bg-gradient-to-r from-blazing-ember to-crunch-glow text-3xl transition-transform duration-300 group-hover:scale-110"></i>
+            </div>
+            <h2 class="font-kaushan bg-gradient-to-r from-blazing-ember to-crunch-glow bg-clip-text text-transparent">FireBorn Pizza</h2>
+        </a>
+        <nav class="hidden lg:block" aria-label="Main navigation">
+            <ul class="flex space-x-6 pr-8 font-mclaren">
+                <li><a href="about.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">About</a></li>
+                <li><a href="contact.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Contact</a></li>
+                <li><a href="menu.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Menu</a></li>
+                <li><a href="gallery.html" class="hover:text-crunch-glow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded px-3 py-1">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div class="lg:hidden px-4">
+            <button 
+                id="mobile-menu-button" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu" 
+                class="text-white hover:text-crunch-glow focus:outline-none focus:ring-2 focus:ring-crunch-glow focus:ring-offset-2 focus:ring-offset-charred-oak rounded-md justify-self-center"
+            >
+                <span class="sr-only">Open main menu</span>
+                <i class="fa-solid fa-bars text-2xl justify-self-center" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <!-- Mobile Menu -->
+    <aside id="mobile-menu" class="fixed top-0 right-0 h-full w-80 bg-charred-oak shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Header with logo and close button -->
+        <div class="flex justify-between items-center p-6 border-b border-white/10 bg-charred-oak/90 backdrop-blur-sm">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-fire-flame-curved text-crunch-glow text-xl"></i>
+                <h2 class="text-2xl font-kaushan text-white">FireBorn Pizza</h2>
+            </div>
+            <button id="close-mobile-menu" class="text-white hover:text-crunch-glow focus:outline-none p-2 -mr-2" aria-label="Close menu">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Mobile navigation" class="flex-1 overflow-y-auto py-4">
+            <div class="px-6 mb-6">
+                <p class="text-crunch-glow/90 text-sm font-medium mb-4">MAIN MENU</p>
+                <div class="grid grid-cols-2 gap-3 md:gap-7 ">
+                    <a href="index.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-home text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Home</span>
+                    </a>
+                    
+                    <a href="menu.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20 relative">
+                        <i class="fas fa-pizza-slice text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Our Menu</span>
+                        <span class="absolute top-2 right-2 bg-crunch-glow/10 text-crunch-glow text-[10px] px-1.5 py-0.5 rounded-full">New</span>
+                    </a>
+                    
+                    <a href="about.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-info-circle text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">About Us</span>
+                    </a>
+                    
+                    <a href="gallery.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20">
+                        <i class="fas fa-images text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Gallery</span>
+                    </a>
+                    
+                    <a href="contact.html" class="flex flex-col items-center justify-center p-4 text-white hover:bg-blazing-ember/20 hover:text-crunch-glow rounded-xl transition-all duration-200 group border border-white/5 hover:border-crunch-glow/20 col-span-2">
+                        <i class="fas fa-envelope text-2xl mb-2 text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                        <span class="text-sm font-medium">Contact Us</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="px-6 mb-6">
+                <p class="text-crunch-glow/90 text-sm font-medium mb-4">SPECIAL OFFERS</p>
+                <div class="bg-blazing-ember/10 rounded-xl p-4 mb-4 border border-crunch-glow/20">
+                    <p class="text-white font-medium mb-1">Family Deal</p>
+                    <p class="text-white/70 text-sm mb-2">2 Large Pizzas + 2 Sides + 4 Drinks</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-crunch-glow font-bold">€29.99</span>
+                        <button class="text-xs bg-crunch-glow text-charred-oak px-3 py-1 rounded-full font-medium hover:bg-opacity-90 transition-colors">Order Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-6">
+                <a href="" class="block w-full text-center bg-gradient-to-r from-blazing-ember to-crunch-glow text-white py-3 px-6 rounded-xl font-medium hover:opacity-90 transition-opacity shadow-lg shadow-crunch-glow/20">
+                    Order Now
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Aside's Footer -->
+        <div class="border-t border-white/10 p-6 bg-charred-oak/80 backdrop-blur-sm">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-crunch-glow transition-colors text-xl" aria-label="TripAdvisor">
+                    <i class="fab fa-tripadvisor"></i>
+                </a>
+            </div>
+            <div class="text-center text-white/60 text-xs space-y-1">
+                <p>123 Pizza Street, Napoli</p>
+                <p>Open: Mon-Sun 11:00 - 23:00</p>
+                <p class="mt-2"> 2025 FireBorn Pizza</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="pt-10">
+        <!-- Hero Section -->
+        <section class="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-charred-oak">
+                <div class="absolute inset-0 bg-[url('static/images/gallery/pexels-renestrgar-13946695.webp')] bg-cover bg-center"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-charred-oak/80 to-charred-oak/90"></div>
+            </div>
+            <div class="relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-climate text-crunch-glow mb-4">Get In Touch</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-blazing-ember to-crunch-glow mx-auto mb-6"></div>
+                <p class="text-flour-canvas/90 text-lg max-w-2xl mx-auto">Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+        </section>
+    
+        <!-- Contact Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <div class="relative">
+                            <h2 class="text-3xl font-climate text-charred-oak mb-2">Send Us a Message</h2>
+                            <div class="w-16 h-1 bg-gradient-to-r from-blazing-ember to-crunch-glow mb-8"></div>
+                            
+                            <form class="space-y-6" action="https://formsubmit.co/aira.dev32@gmail.com" method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="relative">
+                                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-charred-oak/20 rounded-lg focus:ring-2 focus:ring-crunch-glow focus:border-transparent transition-all duration-200" placeholder=" ">
+                                        <label for="name" class="absolute left-4 -top-2.5 px-1 text-sm text-charred-oak/70 bg-white">Your Name</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-charred-oak/20 rounded-lg focus:ring-2 focus:ring-crunch-glow focus:border-transparent transition-all duration-200" placeholder=" ">
+                                        <label for="email" class="absolute left-4 -top-2.5 px-1 text-sm text-charred-oak/70 bg-white">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-charred-oak/20 rounded-lg focus:ring-2 focus:ring-crunch-glow focus:border-transparent transition-all duration-200" placeholder=" ">
+                                    <label for="subject" class="absolute left-4 -top-2.5 px-1 text-sm text-charred-oak/70 bg-white">Subject</label>
+                                </div>
+                                <div class="relative">
+                                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-charred-oak/20 rounded-lg focus:ring-2 focus:ring-crunch-glow focus:border-transparent transition-all duration-200 resize-none" placeholder=" "></textarea>
+                                    <label for="message" class="absolute left-4 -top-2.5 px-1 text-sm text-charred-oak/70 bg-white">Your Message</label>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-blazing-ember to-crunch-glow text-white py-4 px-6 rounded-lg font-medium text-lg hover:opacity-90 transition-opacity duration-200 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-crunch-glow/30">
+                                    Send Message
+                                    <i class="fas fa-paper-plane ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+    
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-br from-charred-oak to-charred-oak/90 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[url('../static/images/pizza-pattern.png')] opacity-5"></div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-climate text-crunch-glow mb-6">Contact Information</h3>
+                                
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-crunch-glow/10 flex items-center justify-center text-crunch-glow mr-4">
+                                            <i class="fas fa-map-marker-alt text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-lg mb-1">Our Location</h4>
+                                            <p class="text-flour-canvas/80">123 Pizza Street<br>Naples, Italy 80100</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-crunch-glow/10 flex items-center justify-center text-crunch-glow mr-4">
+                                            <i class="fas fa-phone-alt text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-lg mb-1">Phone Number</h4>
+                                            <p class="text-flour-canvas/80">+39 123 456 7890</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-crunch-glow/10 flex items-center justify-center text-crunch-glow mr-4">
+                                            <i class="fas fa-envelope text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-lg mb-1">Email Address</h4>
+                                            <p class="text-flour-canvas/80">info@firebornpizza.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-crunch-glow/10 flex items-center justify-center text-crunch-glow mr-4">
+                                            <i class="fas fa-clock text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium text-lg mb-1">Opening Hours</h4>
+                                            <p class="text-flour-canvas/80">Monday - Sunday: 11:00 AM - 11:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="mt-16 rounded-2xl overflow-hidden shadow-xl border border-charred-oak/10">
+                    <div class="aspect-w-16 aspect-h-9 w-full h-96">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d14.2681244!3d40.8517746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b09c4d4f1c1b9%3A0x3d6e3d7c1e7a4b5a!2sNaples%2C%20Metropolitan%20City%20of%20Naples%2C%20Italy!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            aria-label="Our location on Google Maps"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-charred-oak border-t text-flour-canvas pt-12 pb-4" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo and Description -->
+                <div class="md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-4 group" aria-label="Go to home">
+                        <div class="relative">
+                            <i class="fa-solid fa-fire-flame-curved text-transparent bg-clip-text bg-gradient-to-r from-blazing-ember to-crunch-glow text-3xl transition-transform duration-300 group-hover:scale-110"></i>
+                            <i class="fa-solid fa-fire-flame-curved text-crunch-glow/20 absolute inset-0 blur-sm"></i>
+                        </div>
+                        <h2 class="font-kaushan text-2xl bg-gradient-to-r from-blazing-ember to-crunch-glow bg-clip-text text-transparent">FireBorn Pizza</h2>
+                    </a>
+                    <p class="text-flour-canvas/70 mb-4">Authentic Neapolitan pizza baked in a wood-fired oven, prepared with selected ingredients and a lot of passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-3 md:gap-x-8">
+                        <a href="index.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="menu.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Menu</span>
+                        </a>
+                        <a href="index.html#specialties" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Specialties</span>
+                        </a>
+                        <a href="index.html#location" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Location</span>
+                        </a>
+                        <a href="about.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>About Us</span>
+                        </a>
+                        <a href="contact.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Contact</span>
+                        </a>
+                        <a href="gallery.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Stay Updated</h4>
+                    <p class="text-white/70 mb-4">Subscribe to our newsletter to receive special offers and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-flour-canvas border border-r-0 border-flour-canvas" aria-label="Your email address">
+                        <button type="submit" class="bg-blazing-ember hover:bg-blazing-ember/90 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/50 text-sm">&copy; 2025 FireBorn Pizza. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Cookie Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center border-t border-white/10 pt-6">
+                <a href="https://airadev-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center text-white/70 hover:text-crunch-glow text-xs font-mclaren tracking-wider transition-colors duration-300">
+                    <img src="static/images/logo aira per esteso.svg" class="w-30" alt="Author logo">
+                </a>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
