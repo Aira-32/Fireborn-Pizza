@@ -134,9 +134,13 @@
         <!-- Hero Section -->
         <section class="relative h-[70vh] min-h-[600px] flex items-center justify-center bg-charred-oak overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
-                     alt="Wood-fired pizza oven" 
-                     class="w-full h-full object-cover opacity-40">
+                <picture>
+                    <source srcset="static/images/gallery/pexels-renestrgar-13946695.webp" type="image/webp">
+                    <img src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
+                         alt="Wood-fired pizza oven" 
+                         class="w-full h-full object-cover opacity-40"
+                         loading="lazy">
+                </picture>
             </div>
             
             <div class="container mx-auto px-4 relative z-10 text-center">
@@ -158,11 +162,14 @@
                 <div class="absolute -left-20 -top-20 w-64 h-64 rounded-full bg-amber-100 -z-10"></div>
                 
                 <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <img 
-                        src="static/images/gallery/pexels-alexandra-stroescu-1044324559-29021173.jpg" 
-                        alt="pizza on plate with drinks"
-                        class="h-[700px] rounded-2xl overflow-hidden shadow-2xl justify-self-center"
-                    >
+                    <picture>
+                        <source srcset="static/images/gallery/pexels-alexandra-stroescu-1044324559-29021173.webp" type="image/webp">
+                        <img 
+                            src="static/images/gallery/pexels-alexandra-stroescu-1044324559-29021173.jpg" 
+                            alt="pizza on plate with drinks"
+                            class="h-[300px] md:h-[500px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl justify-self-center"
+                            loading="lazy">
+                    </picture>
                     
                     
                     <div class="space-y-8">
@@ -207,50 +214,62 @@
                         <span class="block text-2xl font-girassol text-amber-600 mb-2">Our Kitchen's Heart</span>
                         Crafted with Passion
                     </h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto font-mclaren">
+                    <p class="text-gray-600 max-w-3xl mx-auto text-lg font-mclaren">
                         The secret behind every perfect bite
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 mb-16">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50 hover:border-amber-100 transform hover:-translate-y-1">
                         <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
                             <i class="fas fa-leaf text-2xl text-amber-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Local Ingredients</h3>
-                        <p class="text-gray-600 text-center font-mclaren">
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">
                             Partnering with local farmers for the freshest, highest quality ingredients.
                         </p>
+                        <div class="mt-4 text-center">
+                            <span class="inline-block w-10 h-0.5 bg-amber-400 rounded-full"></span>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50 hover:border-amber-100 transform hover:-translate-y-1">
                         <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
                             <i class="fas fa-clock text-2xl text-amber-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Slow Fermentation</h3>
-                        <p class="text-gray-600 text-center font-mclaren">
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">
                             48-hour proofing for the perfect crust - crispy outside, airy inside.
                         </p>
+                        <div class="mt-4 text-center">
+                            <span class="inline-block w-10 h-0.5 bg-amber-400 rounded-full"></span>
+                        </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-50 hover:border-amber-100 transform hover:-translate-y-1">
                         <div class="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-50 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-inner">
                             <i class="fas fa-fire text-2xl text-amber-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-center mb-3 text-charred-oak">Wood-Fired Oven</h3>
-                        <p class="text-gray-600 text-center font-mclaren">
+                        <p class="text-gray-600 text-center text-sm leading-relaxed">
                             Traditional oak and olive wood oven reaching 400°C for authentic flavor.
                         </p>
+                        <div class="mt-4 text-center">
+                            <span class="inline-block w-10 h-0.5 bg-amber-400 rounded-full"></span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="rounded-2xl overflow-hidden shadow-2xl">
                     <div class="relative group">
-                        <img 
-                            src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
-                            alt="Wood-fired oven with flames licking the pizza"
-                            class="w-full h-[600px] object-center object-cover transition-transform duration-700 group-hover:scale-105"
-                        >
+                        <picture>
+                            <source srcset="static/images/gallery/pexels-renestrgar-13946695.webp" type="image/webp">
+                            <img 
+                                src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
+                                alt="Wood-fired oven with flames licking the pizza"
+                                class="w-full h-[600px] object-center object-cover transition-transform duration-700 group-hover:scale-105"
+                                loading="lazy">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-charred-oak/70 to-transparent flex items-end p-8">
                             <div class="text-white">
                                 <h3 class="text-2xl font-bold mb-2">Our Signature Oven</h3>
@@ -277,9 +296,13 @@
                     <!-- Team Member 1 -->
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                         <div class="h-80 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1604908177453-7462950a6cf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80" 
-                                 alt="Marco Rossi - Head Pizzaiolo" 
-                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <picture>
+                                <source srcset="static/images/about/jonathan-borba-FBGwwINAJHQ-unsplash.webp" type="image/webp">
+                                <img src="static/images/about/jonathan-borba-FBGwwINAJHQ-unsplash.jpg" 
+                                     alt="Marco Rossi - Head Pizzaiolo" 
+                                     class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-charred-oak mb-1">Marco Rossi</h3>
@@ -293,15 +316,19 @@
                     <!-- Team Member 2 -->
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                         <div class="h-80 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1556911220-bf7efc89d8c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" 
-                                 alt="Giulia Bianchi - Pastry Chef" 
-                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <picture>
+                                <source srcset="static/images/about/janko-ferlic-2oiJD1qJNEQ-unsplash.webp" type="image/webp">
+                                <img src="static/images/about/janko-ferlic-2oiJD1qJNEQ-unsplash.jpg" 
+                                     alt="Giulio Bianchi - Pastry Chef" 
+                                     class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-charred-oak mb-1">Giulia Bianchi</h3>
+                            <h3 class="text-2xl font-bold text-charred-oak mb-1">Giulio Bianchi</h3>
                             <p class="text-blazing-ember font-medium mb-4">Pastry Chef</p>
                             <p class="text-charred-oak/80 mb-4 font-mclaren">
-                                The queen of desserts, bringing traditional Italian pastries with a modern twist to our menu.
+                                The king of desserts, bringing traditional Italian pastries with a modern twist to our menu.
                             </p>
                         </div>
                     </div>
@@ -309,9 +336,13 @@
                     <!-- Team Member 3 -->
                     <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                         <div class="h-80 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d8d545b?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" 
-                                 alt="Luca Neri - Sous Chef" 
-                                 class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                            <picture>
+                                <source srcset="static/images/about/matheen-faiz-v0rcIyGZn6M-unsplash.webp" type="image/webp">
+                                <img src="static/images/about/matheen-faiz-v0rcIyGZn6M-unsplash.jpg" 
+                                     alt="Luca Neri - Sous Chef" 
+                                     class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                                     loading="lazy">
+                            </picture>
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-charred-oak mb-1">Luca Neri</h3>
@@ -328,9 +359,13 @@
         <!-- CTA Section -->
         <section class="py-24 bg-gradient-to-br from-charred-oak to-charred-oak/90 text-white relative overflow-hidden">
             <div class="absolute inset-0 z-0 opacity-10">
-                <img src="static/images/gallery/pexels-rachel-claire-5531438.jpg" 
-                     alt="Restaurant interior" 
-                     class="w-full h-full object-cover object-bottom">
+                <picture>
+                    <source srcset="static/images/gallery/pexels-rachel-claire-5531438.webp" type="image/webp">
+                    <img src="static/images/gallery/pexels-rachel-claire-5531438.jpg" 
+                         alt="Restaurant interior" 
+                         class="w-full h-full object-cover object-bottom"
+                         loading="lazy">
+                </picture>
             </div>
             <div class="container mx-auto px-4 relative z-10 text-center">
                 <h2 class="text-4xl md:text-5xl font-climate text-crunch-glow mb-6">Taste the Tradition</h2>
