@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>FireBorn Pizza - Homepage</title>
     <meta name="description" content="FireBorn Pizza - A demo restaurant website showcasing modern web development. Practice project featuring responsive design, interactive components, and UI/UX best practices.">
 </head>
@@ -240,7 +240,7 @@
                     <div class="swiper">
                         <div class="swiper-wrapper pb-12">
                             <!-- Margherita -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide w-80">
                                 <div class="relative bg-gradient-to-br from-amber-50 to-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col border-2 border-amber-100 min-w-[280px] group">
                                     <div class="relative flex-1 flex items-center justify-center p-2">
                                         <div class="absolute inset-0 bg-gradient-to-br from-amber-100/20 to-amber-50/30 rounded-t-3xl group-hover:opacity-80 transition-opacity"></div>
@@ -266,7 +266,7 @@
                             </div>
                             
                             <!-- Diavola -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide w-80">
                                 <div class="relative bg-gradient-to-br from-red-50 to-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col border-2 border-red-100 min-w-[280px] group">
                                     <div class="relative flex-1 flex items-center justify-center p-2">
                                         <div class="absolute inset-0 bg-gradient-to-br from-red-100/20 to-red-50/30 rounded-t-3xl group-hover:opacity-80 transition-opacity"></div>
@@ -291,7 +291,7 @@
                             </div>
                             
                             <!-- Vegetariana -->
-                            <div class="swiper-slide">
+                            <div class="swiper-slide w-80">
                                 <div class="relative bg-gradient-to-br from-green-50 to-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col border-2 border-green-100 min-w-[280px] group">
                                     <div class="relative flex-1 flex items-center justify-center p-2">
                                         <div class="absolute inset-0 bg-gradient-to-br from-red-100/20 to-red-50/30 rounded-t-3xl group-hover:opacity-80 transition-opacity"></div>
@@ -351,6 +351,7 @@
                         font-weight: 700;
                     }
                 </style>
+
 
                 <!-- View Full Menu Button -->
                 <div class="text-center mt-16">
@@ -656,124 +657,11 @@
                     </a>
                 </div>
         </footer>
-    
-    <script>
-            // Initialize Swiper if it exists on the page
-            if (document.querySelector('.swiper')) {
-                // Aggiungi stili CSS per i pulsanti
-                const style = document.createElement('style');
-                style.textContent = `
-                    .swiper-button-prev,
-                    .swiper-button-next {
-                        position: absolute;
-                        top: 50%;
-                        width: 56px;
-                        height: 56px;
-                        margin-top: -28px;
-                        z-index: 10;
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: var(--color-blazing-ember);
-                        background: rgba(255, 255, 255, 0.95);
-                        border-radius: 50%;
-                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-                        transition: all 0.3s ease;
-                    }
-                    .swiper-button-prev:hover,
-                    .swiper-button-next:hover {
-                        background: var(--color-blazing-ember);
-                        color: white;
-                        transform: scale(1.1);
-                    }
-                    .swiper-button-prev {
-                        left: 10px;
-                    }
-                    .swiper-button-next {
-                        right: 10px;
-                    }
-                    @media (max-width: 640px) {
-                        .swiper-button-prev,
-                        .swiper-button-next {
-                            width: 44px;
-                            height: 44px;
-                            margin-top: -22px;
-                        }
-                    }
-                `;
-                document.head.appendChild(style);
 
-                // Inizializza lo swiper
-                const swiper = new Swiper('.swiper', {
-                    slidesPerView: 'auto',
-                    spaceBetween: 20,
-                    centeredSlides: true,
-                    loop: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return '<span class="' + className + ' w-2 h-2 mx-1 inline-block rounded-full bg-charred-oak/30 transition-all duration-300" role="button" tabindex="0" aria-label="Go to slide ' + (index + 1) + '"></span>';
-                        }
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                            navigation: {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            }
-                        },
-                        640: {
-                            slidesPerView: 'auto',
-                            spaceBetween: 30,
-                            centeredSlides: true,
-                            navigation: {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            }
-                        }
-                    },
-                    on: {
-                        init: function() {
-                            this.update();
-                            // Forza il ridisegno dei pulsanti
-                            if (this.navigation && this.navigation.nextEl) {
-                                this.navigation.nextEl.style.display = 'flex';
-                            }
-                            if (this.navigation && this.navigation.prevEl) {
-                                this.navigation.prevEl.style.display = 'flex';
-                            }
-                        },
-                        resize: function() {
-                            this.update();
-                        }
-                    }
-                });
-                
-                // Forza la visualizzazione dei pulsanti dopo il caricamento
-                window.addEventListener('load', function() {
-                    swiper.update();
-                    if (swiper.navigation && swiper.navigation.nextEl) {
-                        swiper.navigation.nextEl.style.display = 'flex';
-                    }
-                    if (swiper.navigation && swiper.navigation.prevEl) {
-                        swiper.navigation.prevEl.style.display = 'flex';
-                    }
-                });
-            }
-        ;
-    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
+
 </body>
 </html>
