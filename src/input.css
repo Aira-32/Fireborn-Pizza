@@ -48,27 +48,73 @@
     /* Custom navigation buttons with Tailwind */
     .swiper-button-prev,
     .swiper-button-next {
-        @apply w-12 h-12 rounded-full bg-white/90 shadow-md transition-all duration-300 opacity-100 text-blazing-ember flex items-center justify-center hover:scale-110 hover:bg-white hover:text-crunch-glow;
+        width: 3rem !important;
+        height: 3rem !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+        transition: all 0.3s ease !important;
+        opacity: 1 !important;
+        color: #D45A28 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        backdrop-filter: blur(4px) !important;
+        border: 2px solid rgba(255, 167, 38, 0.2) !important;
+        border-radius: 50% !important;
+        margin-top: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        transform: translateY(-50%) scale(1.1) !important;
+        color: #FFA726 !important;
+        background: white !important;
     }
     
     /* Stile per le icone delle frecce */
     .swiper-button-prev i,
     .swiper-button-next i {
-        @apply text-xl font-bold;
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
+        font-size: 1.5rem !important;
+        font-weight: 900 !important;
+        font-family: 'Font Awesome 6 Free' !important;
+        transition: transform 0.2s ease !important;
+        line-height: 1 !important;
     }
     
-    /* Rimuove le frecce predefinite di Swiper */
+    .swiper-button-prev i {
+        margin-right: 2px !important;
+    }
+    
+    .swiper-button-next i {
+        margin-left: 2px !important;
+    }
+    
+    /* Rimuove completamente le frecce predefinite di Swiper */
+    .swiper-button-prev::before,
+    .swiper-button-next::before,
     .swiper-button-prev::after,
     .swiper-button-next::after {
-        display: none;
+        content: none !important;
+        display: none !important;
     }
     
-    .swiper:hover .swiper-button-prev,
-    .swiper:hover .swiper-button-next {
-        opacity: 1;
-        transform: scale(1);
+    /* Posizionamento su mobile */
+    @media (max-width: 768px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+        }
+        
+        .swiper-button-prev {
+            left: 0.5rem !important;
+        }
+        
+        .swiper-button-next {
+            right: 0.5rem !important;
+        }
     }
 
     .animate-float {
@@ -93,41 +139,17 @@
         padding: 20px 0;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        color: #f59e0b;
-        background: rgba(0, 0, 0, 0.5);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-    }
-
-    .swiper-button-prev:hover,
-    .swiper-button-next:hover {
-        background: rgba(0, 0, 0, 0.7);
-        transform: scale(1.1);
-    }
-
     .swiper-pagination-bullet {
         background: #f59e0b;
         opacity: 0.5;
         width: 12px;
         height: 12px;
-        margin: 0 5px !important;
+        margin: 0 5px;
     }
 
     .swiper-pagination-bullet-active {
         opacity: 1;
         transform: scale(1.2);
-    }
-
-    /* Hide navigation buttons on mobile */
-    @media (max-width: 768px) {
-        .swiper-button-prev,
-        .swiper-button-next {
-            display: none;
-        }
     }
 
     /* Ensure pagination is visible */
@@ -145,5 +167,59 @@
     /* Hover effect for slides */
     .swiper-slide:hover {
         z-index: 1;
+    }
+
+    /* Override for Swiper navigation buttons */
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        width: 48px !important;
+        height: 48px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border: 2px solid rgba(255, 167, 38, 0.2) !important;
+        border-radius: 50% !important;
+        margin-top: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .swiper .swiper-button-prev:hover,
+    .swiper .swiper-button-next:hover {
+        transform: translateY(-50%) scale(1.1) !important;
+        color: #FFA726 !important;
+        background: white !important;
+    }
+
+    /* Hide default Swiper arrows */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        display: none !important;
+    }
+
+    /* Style for the Font Awesome icons */
+    .swiper .swiper-button-prev i,
+    .swiper .swiper-button-next i {
+        font-size: 1.5rem !important;
+        color: #D45A28 !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .swiper .swiper-button-prev,
+        .swiper .swiper-button-next {
+            width: 40px !important;
+            height: 40px !important;
+        }
+        
+        .swiper .swiper-button-prev {
+            left: 10px !important;
+        }
+        
+        .swiper .swiper-button-next {
+            right: 10px !important;
+        }
     }
 }
