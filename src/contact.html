@@ -135,7 +135,16 @@
         <!-- Hero Section -->
         <section class="relative h-64 md:h-96 flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 bg-charred-oak">
-                <div class="absolute inset-0 bg-[url('static/images/gallery/pexels-renestrgar-13946695.webp')] bg-cover bg-center"></div>
+                <picture>
+                    <source srcset="static/images/gallery/pexels-renestrgar-13946695.webp" type="image/webp">
+                    <source srcset="static/images/gallery/pexels-renestrgar-13946695.jpg" type="image/jpeg">
+                    <img 
+                        src="static/images/gallery/pexels-renestrgar-13946695.jpg" 
+                        alt="Delicious pizza with fresh ingredients"
+                        class="w-full h-full object-cover object-center"
+                        loading="lazy"
+                    >
+                </picture>
                 <div class="absolute inset-0 bg-gradient-to-b from-charred-oak/80 to-charred-oak/90"></div>
             </div>
             <div class="relative z-10 text-center px-4">
@@ -185,7 +194,6 @@
                     <!-- Contact Info -->
                     <div class="space-y-8">
                         <div class="bg-gradient-to-br from-charred-oak to-charred-oak/90 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[url('../static/images/pizza-pattern.png')] opacity-5"></div>
                             <div class="relative z-10">
                                 <h3 class="text-2xl font-climate text-crunch-glow mb-6">Contact Information</h3>
                                 
