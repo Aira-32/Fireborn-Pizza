@@ -180,41 +180,49 @@
                     </a>
                     <p class="text-flour-canvas/70 mb-4">Authentic Neapolitan pizza baked in a wood-fired oven, prepared with selected ingredients and a lot of passion.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors" 
+                        aria-label="Visit our Facebook page">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="#" class="text-flour-canvas hover:text-flour-canvas/80 transition-colors"
+                        aria-label="Visit our Instagram profile">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
                     </div>
                 </div>
                 
                 <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
                     <div class="grid grid-cols-2 gap-x-6 gap-y-3 md:gap-x-8">
                         <a href="index.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Home</span>
                         </a>
                         <a href="menu.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Menu</span>
                         </a>
                         <a href="index.html#specialties" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Specialties</span>
                         </a>
                         <a href="index.html#location" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Location</span>
                         </a>
                         <a href="about.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>About Us</span>
                         </a>
                         <a href="contact.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Contact</span>
                         </a>
                         <a href="gallery.html" class="flex items-center space-x-2 text-flour-canvas/70 hover:text-flour-canvas/90 transition-colors group">
-                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow transition-colors"></i>
+                            <i class="fas fa-chevron-right text-xs text-crunch-glow/70 group-hover:text-crunch-glow"></i>
                             <span>Gallery</span>
                         </a>
                     </div>
@@ -226,8 +234,11 @@
                     <p class="text-white/70 mb-4">Subscribe to our newsletter to receive special offers and updates.</p>
                     <form class="flex">
                         <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-flour-canvas border border-r-0 border-flour-canvas" aria-label="Your email address">
-                        <button type="submit" class="bg-blazing-ember hover:bg-blazing-ember/90 px-4 rounded-r-lg">
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" 
+                                class="bg-blazing-ember hover:bg-blazing-ember/90 px-4 rounded-r-lg"
+                                aria-label="Subscribe to newsletter">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            <span class="sr-only">Subscribe</span>
                         </button>
                     </form>
                 </div>
