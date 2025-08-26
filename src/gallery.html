@@ -140,13 +140,23 @@
 
         <div id="lightbox" class="hidden size-full backdrop-blur-xl backdrop-brightness-50 fixed inset-0 z-50 px-5 lg:px-10">
             <div class="w-full flex justify-end">
-                <i class="fa-solid fa-x bg-white py-2.5 px-3 m-4 mr-0 rounded-full text-lg cursor-pointer"></i>
+                <i class="fa-solid fa-x bg-white py-1.5 px-2 md:py-2.5 md:px-3 m-4 mr-0 rounded-full text-lg cursor-pointer"></i>
             </div>
 
-            <div class="flex justify-between items-center h-[85vh]">
-                <i class="arrow fa-solid fa-arrow-left bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
-                <img src="" class="h-full self-center text-white" alt="The image you selected">
-                <i class="arrow fa-solid fa-arrow-right bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-0 md:justify-between items-center h-[85vh]">
+                <div class="hidden md:block">
+                    <i class="arrow fa-solid fa-arrow-left bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
+                </div>
+                <img src="" class="max-h-[800px] md:h-full my-auto text-white" alt="The image you selected">
+                <div class="hidden md:block">
+                    <i class="arrow hidden md:block fa-solid fa-arrow-right bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
+                </div>
+        
+                <div class="flex justify-between w-full mt-auto">
+                    <i class="arrow md:hidden fa-solid fa-arrow-left bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
+                    <i class="arrow md:hidden fa-solid fa-arrow-right bg-white p-4 rounded-full text-2xl cursor-pointer"></i>
+                </div>
+            
             </div>
         </div>
 
